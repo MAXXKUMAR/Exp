@@ -4,11 +4,17 @@ FROM golang:latest
 # Set the working directory in the container
 WORKDIR /go/src/app
 
-# Copy the current directory contents into the container at /go/src/app
-COPY . /go/src/app
+# Copy go.mod and go.sum to ensure dependencies are downloaded efficiently
+COPY go.mod .
+COPY go.sum .
+
+# Download dependencies
+RUN go mod download
+
+# Copy the current directory contents into the container
+COPY . .
 
 # Build the Go application
-RUN go get -d -v ./...
 RUN go install -v ./...
 
 # Set the entry point for the application

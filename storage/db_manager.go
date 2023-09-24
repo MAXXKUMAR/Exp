@@ -3,7 +3,6 @@ package storage
 import (
 	"github.com/MAXXKUMAR/Exp/models"
 	"errors"
-	"fmt"
 	"math/rand"
 )
 

@@ -1,0 +1,22 @@
+{
+    "go.toolsManagement.autoUpdate": true,
+    "go.alternateTools": {
+      "go-outline": "gopls",
+      "go-symbols": "gopls",
+      "guru": "gopls",
+      "gorename": "gopls",
+      "gotests": "gopls",
+      "gomodifytags": "gopls",
+      "impl": "gopls",
+      "fillstruct": "gopls",
+      "goplay": "gopls",
+      "godoctor": "gopls",
+      "goreturns": "gopls",
+      "golint": "gopls",
+      "gopls": "gopls"
+    },
+    "go.testFlags": ["-v"],
+    "go.buildOnSave": "workspace",
+    "go.lintTool": "golangci-lint"
+  }
+  
